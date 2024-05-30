@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var _animation_player = $AnimationPlayer
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -26,12 +26,3 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
-func _process(_delta):
-	if global_position.y > 1000:
-		global_position = Vector2(100, 0)
-	 
-		
-	
-		
-
