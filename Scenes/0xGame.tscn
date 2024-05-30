@@ -1,26 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://c87dgjymju70f"]
+[gd_scene load_steps=6 format=3 uid="uid://c87dgjymju70f"]
 
 [ext_resource type="PackedScene" uid="uid://de62g12jr6did" path="res://Scenes/Player.tscn" id="1_7v2w6"]
-[ext_resource type="Texture2D" uid="uid://bgvvnwa36ao7l" path="res://Sprites/plat.png" id="2_g27g5"]
+[ext_resource type="Texture2D" uid="uid://k63qna1ymioo" path="res://addons/ground.jpg" id="2_7vcjy"]
+[ext_resource type="Texture2D" uid="uid://dyo08kvf1owgj" path="res://Sprites/background.jpg" id="3_135ip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3r62l"]
-size = Vector2(1072, 93)
+size = Vector2(1297.04, 93)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y27s8"]
+a = Vector2(-7, 636)
+b = Vector2(-3, -2)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(576, 326)
+metadata/_edit_horizontal_guides_ = [-1324.0]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_7v2w6")]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+scale = Vector2(2, 2)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-4, 235.5)
+position = Vector2(-19.5, 234)
+scale = Vector2(3.205, 1)
 shape = SubResource("RectangleShape2D_3r62l")
 
 [node name="Plat" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-4, 235.5)
-scale = Vector2(1.16776, 0.164894)
-texture = ExtResource("2_g27g5")
+position = Vector2(-23, 234)
+scale = Vector2(3.205, 0.1)
+texture = ExtResource("2_7vcjy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -99
+position = Vector2(-246, -1477)
+scale = Vector2(1.2045e+06, 999999)
+texture = ExtResource("3_135ip")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-572, -318)
+shape = SubResource("SegmentShape2D_y27s8")
