@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c87dgjymju70f"]
+[gd_scene load_steps=17 format=3 uid="uid://dqkvgp67gk47p"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_e17k4"]
 [ext_resource type="Script" path="res://Scripts/0xGame.gd" id="1_y7kif"]
@@ -109,10 +109,10 @@ scale = Vector2(0.714286, 1)
 shape = SubResource("SegmentShape2D_mob53")
 
 [node name="Label2" type="Label" parent="Camera2D"]
-offset_left = 153.571
-offset_top = -377.0
-offset_right = 193.571
-offset_bottom = -308.0
+offset_left = 139.286
+offset_top = -376.0
+offset_right = 179.286
+offset_bottom = -307.0
 theme_override_font_sizes/font_size = 50
 text = "0"
 
